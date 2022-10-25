@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""This takes the users GitHub username and password and uses the GibHub API to display their id
-"""
-if __name__ == "__main__":
-    import sys
-    import requests
-    r = requests.get('https://api.github.com/user',
-                     auth=(sys.argv[1], sys.argv[2]))
-    print(r.json().get('id'))
+""" This script takes the users GitHub
+username and password and uses the GitHub API to display their id"""
+import requests
+from sys import argv
+
+if __name__ == '__main__':
+    url = f"https://api.github.com/user"
+    res = requests.get(url, auth=(argv[1], argv[2]))
+    get_id = res.json()
+    print(get_id.get('id'))
