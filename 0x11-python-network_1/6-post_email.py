@@ -5,5 +5,5 @@ if __name__ == "__main__":
     import sys
     import requests
     payload = {'email': sys.argv[2]}
-    r = requests.post(sys.argv[1], data=payload)
+    r = requests.post(sys.argv[1], payload)
     print(r.text)
