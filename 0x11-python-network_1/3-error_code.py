@@ -4,14 +4,15 @@
    sends a request to the URL 
    and displays the body of the response (decoded in utf-8).
 """
-import urllib.request as request
-import urllib.parse as parse
-from urllib import error
+import urllib.request
 from sys import argv
 
 if __name__ == '__main__':
-        try:
-            with request.urlopen(argv[1]) as r:
-                print(r.read().decode('utf-8'))
-        except error.HTTPError as e:
-             print("Error code: {}".format(e.code))
+    req = urllib.request.Request(argv[1])
+    try:
+        with urllib.request.urlopen(req) as reponse:
+            html = response.read()
+            print(html.decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        print(f'Error code: {e.code}')
+
