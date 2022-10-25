@@ -7,5 +7,5 @@ from sys import argv
 
 if __name__ == "__main__":
     para = {'email': argv[2]}
-    r = requests.post(argv[1], para)
-    print(r.text)
+    body = requests.post(argv[1], para)
+    print(body.text)
