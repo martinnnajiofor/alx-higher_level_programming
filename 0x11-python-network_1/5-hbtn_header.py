@@ -3,7 +3,9 @@
 X-Request-Id it the response header
 """
 if __name__ == "__main__":
-    import sys
     import requests
-    r = requests.get(sys.argv[1])
-    print(r.headers.get('X-Request-Id'))
+    from sys import argv
+
+    req = requests.get(sys.argv[1])
+    html = req.headers
+    print(html.get('X-Request-Id'))
