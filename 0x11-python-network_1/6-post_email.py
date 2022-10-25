@@ -6,6 +6,6 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    para = {'email': argv[2]}
-    body = requests.post(argv[1], para) 
+    parameter = {'email': argv[2]}
+    body = requests.post(argv[1], parameter) 
     print(body.text)
