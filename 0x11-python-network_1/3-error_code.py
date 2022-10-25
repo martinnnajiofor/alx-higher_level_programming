@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-   This uses the package requests to fetch https://intranet.hbtn.io/status
+   This is a Python script that takes in a URL, 
+   sends a request to the URL 
+   and displays the body of the response (decoded in utf-8).
 """
 import urllib.request as request
 import urllib.parse as parse
